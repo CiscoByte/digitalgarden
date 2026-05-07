@@ -30,6 +30,7 @@ jobs:
           node-version: '23'
         
       - run: npm install
+      - run: npx @11ty/eleventy --pathprefix=${{ github.event.repository.name }}
       - run: npm run build 
       - name: Setup Pages
         uses: actions/configure-pages@v5
