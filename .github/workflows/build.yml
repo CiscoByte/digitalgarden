@@ -29,7 +29,19 @@ jobs:
         with:
           node-version: '23'
           cache: 'npm'
-        
+      
+      - name: Cache Eleventy Data
+        uses: actions/cache@v4
+        with:
+          path: |
+            .cache
+            dist
+          # This key changes whenever your notes or packages change
+          key: ${{ runner.os }}-eleventy-${{ hashFiles('**/package-lock.json') }}-${{ github.run_id }}
+          # This allows it to "restore" from the most recent successful build
+          restore-keys: |
+            ${{ runner.os }}-eleventy-${{ hashFiles('**/package-lock.json') }}-
+            ${{ runner.os }}-eleventy-   
       - run: npm install
       
       # This runs your theme setup, sass build, AND eleventy with the prefix, portable if you change
