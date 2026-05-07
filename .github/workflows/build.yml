@@ -28,10 +28,13 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '23'
+          cache: 'npm'
         
       - run: npm install
-      - run: npx @11ty/eleventy --pathprefix=${{ github.event.repository.name }}
-      - run: npm run build 
+      
+      # This runs your theme setup, sass build, AND eleventy with the prefix
+      - run: npm run build -- --pathprefix=${{ github.event.repository.name }}
+      
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact
