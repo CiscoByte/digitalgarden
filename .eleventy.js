@@ -770,7 +770,6 @@ module.exports = function(eleventyConfig) {
       output: "dist",
       data: `_data`,
     },
-    pathPrefix: "/digitalgarden/",
     templateFormats: ["njk", "md", "11ty.js", "canvas"],
     htmlTemplateEngine: "njk",
     markdownTemplateEngine: false,
