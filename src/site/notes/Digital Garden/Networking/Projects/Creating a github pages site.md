@@ -21,7 +21,7 @@ It seems that you can trigger another repo via a dispatcher:
 ```
 
 # The Plan
-I want to be able to develop on obsidian and push my notes via the [[Digital Garden/digital garden\|digital garden]] plugin. The notes will be sent to the digital garden repo, trigger the build and trigger the build on the main site.
+I want to be able to develop on obsidian and push my notes via the [digital garden](https://ciscobyte.github.io/digitalgarden/) plugin. The notes will be sent to the digital garden repo, trigger the build and trigger the build on the main site.
 
 ## The Purpose
 This will allow me to develop, create and study all my notes under one app (Obsidian). All I would need to do is send the macro command and every thing will be updated on github pages. So this gives the illusion of running two different sites but it is all under one site. Where it is sustainable or not is under clear. I hope this will lead to more ideas, combinations and curiosity. 
@@ -49,3 +49,4 @@ baseurl: # Leave this empty (do NOT delete it)
 ```
 
 I know its excessive... but I'm learning I suppose? Let's try.
+## GitHub Actions
