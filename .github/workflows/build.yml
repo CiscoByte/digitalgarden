@@ -57,3 +57,12 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+            
+      - name: Repository Dispatch
+        if: github.event_name != 'pull_request'
+        uses: peter-evans/repository-dispatch@v3
+        with:
+          token: ${{ secrets.ACTIONS_KEY }}
+          repository: ciscobyte/ciscobyte.github.io
+          event-type: trigger-deployment
+          client-payload: '{"branch": "al-folio"}'
