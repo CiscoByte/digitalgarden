@@ -1,0 +1,22 @@
+{
+  "/": [
+    "Digital Garden"
+  ],
+  "/Digital Garden": [
+    "Networking",
+    "A digital garden"
+  ],
+  "/Digital Garden/Networking": [
+    "Labs",
+    "Projects"
+  ],
+  "/Digital Garden/Networking/Labs": [
+    "Scan using Zenmap"
+  ],
+  "/Digital Garden/Networking/Projects": [
+    "Another post",
+    "Creating a github pages site",
+    "Creating a simple SOHO network",
+    "dispatch test"
+  ]
+}
