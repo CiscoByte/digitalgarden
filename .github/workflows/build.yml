@@ -57,13 +57,5 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-      
-      - name: Trigger Target Branch Workflow
-        if: github.event_name != 'pull_request'
-        uses: benc-uk/workflow-dispatch@v1
-        with:
-          token: ${{ secrets.ACTIONS_KEY }}
-          repo: ciscobyte/ciscobyte.github.io
-          workflow: deploy.yml # <--- Replace with the exact filename of your target YAML file
-          ref: al-folio        # <--- This forces GitHub to execute on your secondary branch
+
 
